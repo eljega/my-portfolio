@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos de la barra superior */
+#navbar {
+    background: linear-gradient(to bottom, #0f0f0f, #393939); /* Degradado vertical */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.307); /* Sombras difusas */
+    animation: adjust-navbar linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+
+@keyframes adjust-navbar{
+    to{
+        background: linear-gradient(to bottom, #0f0f0fa1, #3939399d); /* Degradado vertical */
+        backdrop-filter: blur(5px);
+        
+    }
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los ítems */
+}
+
+#navbar li {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el espacio entre los ítems */
+}
+
+#navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+
+/* Estilos para la sección inicio */
+
+.inicio-section {
+    display: flex;
+    justify-content: flex-end; /* Esto centrará ambos contenedores horizontalmente */
+    align-items: center; /* Esto centrará ambos contenedores verticalmente */
+    height: 100vh;
+    flex-direction: row-reverse; /* Esto colocará la imagen de perfil a la izquierda */
+    background: url('/static/images/background-inicio-oscuro3.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.info-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    max-width: 412px;
+    border-radius: 10px;
+    width: 60%; /* Ajusta este valor para que sea del tamaño deseado */
+    height: 80vh;
+    margin-left: auto;
+    transform: translateX(100%); /* Inicialmente fuera de la pantalla a la derecha */
+    opacity: 0; /* Invisible al inicio */
+    transition: transform 1s, opacity 1s; /* Efecto de transición */
+
+}
+
+.info-container.show {
+    transform: translateX(0); /* Posición final, en su lugar original */
+    opacity: 1; /* Visible */
+}
+
+.info-container.hide {
+    transform: translateX(100%); /* Mover hacia la derecha */
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+
+
+
+.info-container h1 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: Arial, sans-serif; /* Mantén la fuente a Arial o una fuente sans-serif */
+    font-weight: bold; /* Esto ya está haciendo que el texto sea más grueso */
+    font-size: 2.5em; /* Aumenta el tamaño de la fuente un poco más para resaltarlo */
+    max-width: 100%; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade una sombra suave al texto */
+}
+
+
+.info-container hr {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin-bottom: 15px;
+}
+
+.info-container p {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: Arial, sans-serif; /* Cambia la fuente a Arial o una fuente sans-serif */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    font-size: 1.3em; /* Aumenta el tamaño de la fuente */
+    max-width: 100%; 
+}
+
+
+.contact-info p {
+    margin-bottom: 3px;
+    padding-top: 10px;
+}
+
+/* seccion de inicio parte izquierda */
+.perfil-container {
+    width: 30%; /* Ajusta este valor para que sea del tamaño deseado */
+    padding: 2em;
+    text-align: center; 
+    margin-left: 100px;
+    margin-bottom: 80px;
+
+    transform: translateX(-100%); /* Inicialmente fuera de la pantalla a la derecha */
+    opacity: 0; /* Invisible al inicio */
+    transition: transform 1s, opacity 1s; /* Efecto de transición */
+}
+
+.perfil-container.show {
+    transform: translateX(0); /* Posición final, en su lugar original */
+    opacity: 1; /* Visible */
+}
+
+.perfil-container.hide {
+    transform: translateX(-100%); /* Mover hacia la izquierda */
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+.imagen-perfil img {
+    width: 280px; /* Ajusta según prefieras */
+    height: 280px;
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid #665164;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Aplica transición suave */
+    animation: border-color-animation 6s infinite; /* Aplica la animación de cambio de colores */
+}
+
+@keyframes border-color-animation {
+    0% { border-color: rgb(22, 0, 29); } /* Color inicial */
+    25% { border-color: #cecece; } /* Color intermedio 1 */
+    50% { border-color: #280036; } /* Color intermedio 2 */
+    75% { border-color: #665164; } /* Color intermedio 3 */
+    100% { border-color: #000000; } /* Color final (vuelve al color inicial) */
+}
+
+.boton-cv a {
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 17px;
+    padding: 15px 30px;
+    background-color: #424242;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Agrega una transición suave para el cambio de color de fondo y el aumento de tamaño */
+    text-shadow: 1px 1px 0 rgb(0, 0, 0.018); /* Sombra de texto menos difusa */
+    z-index: 1000;
+    box-shadow: 0 5px 8px rgb(0, 0, 0); /* Sombras difusas */
+}
+
+.boton-cv a:hover{
+    background-color: #665164; /* Cambio de color del borde al pasar el mouse (azul en este caso) */
+    transform: scale(1.1); /* Aumento del tamaño al pasar el mouse */
+    box-shadow: 0 5px 8px rgb(253, 207, 255); /* Sombras difusas */
+}
+
+.redes a {
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+.redes img {
+    max-width: 40px; /* Tamaño del ícono */
+    height: auto; /* Mantiene la proporción de aspecto original */
+    border: 2px solid transparent; /* Borde transparente de 2px alrededor de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    transition: border-color 0.3s, transform 0.3s; /* Efecto de transición suave en el borde y el tamaño */
+    border-color: #ffffff;
+
+}
+
+.redes img:hover{
+    border-color: #665164; /* Cambio de color del borde al pasar el mouse (azul en este caso) */
+    transform: scale(1.1); /* Aumento del tamaño al pasar el mouse */
+}
+
+/* Media Queries para Responsive Design */
+@media only screen and (max-width: 768px) { /* Tablet y dispositivos móviles */
+    .info-container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .info-container p{
+        font-size: 1.2em;
+    }
+
+    .perfil-container {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .imagen-perfil img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .boton-cv a {
+        margin: 10px auto;
+        display: block;
+    }
+
+    .redes img {
+        max-width: 30px;
+    }
+
+
+
+    #navbar li {
+        margin: 5px -8px;
+    }
+}
+
+@media only screen and (max-width: 480px) { /* Solo dispositivos móviles */
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .info-container {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        margin-left: auto;
+        margin-bottom: 40px;
+    }
+
+    
+    .info-container h1 {
+        font-size: 2.0em; /* Disminuye el tamaño de fuente del título */
+        margin-bottom: 10px;
+    }
+
+    .info-container p{
+        font-size: 1.1em;
+
+    }
+
+    .contact-info p {
+        margin-bottom: -10px;
+    }
+    .perfil-container {
+ /* Ajusta este valor para que sea del tamaño deseado */
+        padding: 1em;
+        text-align: center; 
+        margin-left: 0;
+        margin-bottom: 80px;
+    }
+    
+
+    .imagen-perfil img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .boton-cv a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .redes img {
+        max-width: 25px;
+    }
+}

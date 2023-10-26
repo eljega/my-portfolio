@@ -1,0 +1,70 @@
+#education-section {
+    background: radial-gradient(circle, #3e2863, #090017); /* Similar al fondo de la imagen proporcionada */
+    padding: 20px;
+
+}
+
+.education-title {
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.education-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.certificate-card {
+    background: #232233; /* Fondo oscuro para contrastar con el fondo principal */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 0 15px #efc3ff; /* Resplandor alrededor del logo */
+}
+
+.certificate-title {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.certificate-description {
+    color: #b2b2b4;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.view-certificate-btn {
+    background-color: #6458F0; /* Color principal del botón */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-certificate-btn:hover {
+    background-color: #5045D1; /* Oscurecer el color al pasar el mouse */
+}
+
+.certificate-card img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -15px;
+}
