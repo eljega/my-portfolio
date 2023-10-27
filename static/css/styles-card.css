@@ -1,0 +1,116 @@
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 620px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-45deg, #1e1e2f 0%, #5b3d80 100% );
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 0;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 32px;
+    z-index: 1;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+    z-index: 1;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #6458F0 0%, #150233 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(-45deg, #6458F0 0%, #090017 100% );
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover::before {
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .card:hover {
+    box-shadow: none;
+    z-index: 1;
+  }
+  
+  .card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+    z-index: 10;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+    z-index: 2;
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+    z-index: 2;
+  }
+  
+.card p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    max-width: 100%; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.445);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 32px;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+    
+}
