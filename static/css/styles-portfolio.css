@@ -1,5 +1,5 @@
 #portfolio {
-    background: linear-gradient(to right, #1e1e2f, #5b3d80);
+    background: linear-gradient(to right, #131419, #3C4655);
     padding: 50px 0;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .portfolio-card button {
-    background: #5b3d80;
+    background: #3C4655;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -90,7 +90,7 @@
 }
 
 .portfolio-card button:hover {
-    background: #4a3166;
+    background: #20242c ;
     transform: scale(1.1);
-    box-shadow: 0 5px 8px rgba(222, 73, 255, 0.64);
+    box-shadow: 0 5px 8px rgba(31, 27, 32, 0.64);
 }

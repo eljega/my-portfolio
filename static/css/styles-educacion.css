@@ -1,5 +1,5 @@
 #education-section {
-    background: radial-gradient(circle, #3e2863, #090017);
+    background: linear-gradient(to right, #000000, #3C4655 );
     padding: 20px;
 
 }
@@ -48,7 +48,7 @@
 }
 
 .view-certificate-btn {
-    background-color: #6458F0;
+    background-color: #3C4655;
     color: #ffffff;
     padding: 10px 15px;
     border: none;
@@ -59,9 +59,9 @@
 }
 
 .view-certificate-btn:hover {
-    background-color: #5045D1;
+    background-color: #20242c;
     transform: scale(1.1);
-    box-shadow: 0 5px 8px rgba(222, 73, 255, 0.64);
+    box-shadow: 0 5px 8px rgba(31, 27, 32, 0.64);
 }
 
 .certificate-card img {

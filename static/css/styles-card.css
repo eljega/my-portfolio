@@ -5,7 +5,7 @@
     justify-content: center;
     width: 620px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(-45deg, #1e1e2f 0%, #5b3d80 100% );
+    background: linear-gradient(-45deg, #2C313C  0%, #131518  100% );
     padding: 32px;
     overflow: hidden;
     border-radius: 10px;
@@ -41,7 +41,7 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
-    background: linear-gradient(-45deg, #6458F0 0%, #150233 100% );
+    background: linear-gradient(-45deg, #3C4655  0%, #3C4655  100% );
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -54,7 +54,7 @@
     bottom: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(-45deg, #6458F0 0%, #090017 100% );
+    background: linear-gradient(-45deg, #202028 0%, #000000 100% );
     z-index: -1;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }

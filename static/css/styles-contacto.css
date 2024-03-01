@@ -70,9 +70,9 @@
 }
 
 .contact-form button:hover {
-    background-color: #665164;
+    background-color: #20242c;
     transform: scale(1.05); 
-    box-shadow: 0 5px 8px rgba(222, 73, 255, 0.64);
+    box-shadow: 0 5px 8px rgba(31, 27, 32, 0.64);
     color: #ffffff;
 }
 
@@ -112,9 +112,9 @@
 }
 
 .contact-details a:hover {
-    color: #665164; 
+    color: #ffffff; 
     transform: scale(1.1);
-    box-shadow: 0 5px 8px rgba(222, 73, 255, 0.64); 
+    box-shadow: 0 5px 8px rgba(31, 27, 32, 0.64);
 }
 
 
@@ -161,6 +161,6 @@
 }
 
 .social-links img:hover {
-    border-color: #772094;
+    border-color: #3C4655 ;
     transform: scale(1.1); 
 }
